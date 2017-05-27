@@ -1,0 +1,65 @@
+-- Prosta baza prostej firmy :)
+-- Chyba wszystko dzia³a :P
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE DATABASE Firma;		-- tworze baze firmy
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE Pracownicy		-- tworze tabele pracownikow
+(
+	ID_Pracownika PRIMARYKEY, 
+	Imie STRING, 
+	Nazwisko STRING, 
+	Wiek INT,
+	Ulica STRING,
+	Miasto STRING,
+	Zarobki DOUBLE,
+	DeleteFlag BOOL
+);
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE Stanowiska		-- tworze tabele stanowisk
+(
+	Nazwa STRING,
+	Czas_Pracy DOUBLE
+);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-- dodawanie rekordow do tabeli Pracownicy ---------------------------------------------------------------------------------------------------
+
+INSERT INTO Pracownicy	
+VALUES
+(
+	1,
+	Artur,
+	Nowak,
+	34,
+	ul. Betonowa 14,
+	Warszawa,
+	2140.50,
+	false
+);
+insert into Pracownicy values(2, Marian, Wolski, 42, ul.Krzaczasta 17, Warszawa, 1897, false);
+insert into Pracownicy values (3,Mariusz,Nowak,41,ul.Dobra 27,Warszawa,1920.50,false);
+insert into Pracownicy values    (   4, Dawid   , Krych,    32, ul.Nowa 22/51 , Warszawa,  1721, false  )      ;
+inSert INto 
+Pracownicy 
+(ID_Pracownika, Imie, 
+Nazwisko, Zarobki) values(5, Marian, Kowalski, 2418.50);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-- dodawanie rekordow do tabeli Stanowiska ---------------------------------------------------------------------------------------------------
+
+INSERT into Stanowiska values(Kasjer,8);
+insert into Stanowiska            
+	VALUes (Magazynier, 6.5);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+----- Testy komend -------------------------------------------------------------------------------------------------------------------------------
+-- select * from Stanowiska;
+Select * from Pracownicy
+-- select * from Pracownicy WHERE Wiek > 40;
+-- select Zarobki, ID_Pracownika, Imie, Nazwisko from Pracownicy where Zarobki < 2000;
+-- UPDATE Pracownicy SET Zarobki = 2000 where Zarobki <= 1950 ;
+-- Update Pracownicy SET DeleteFlag=true, Wiek = 0 where Wiek > 40;
+-- DELETE FROM Pracownicy where DeleteFlag = true;
+-- DELETE table Stanowiska;
