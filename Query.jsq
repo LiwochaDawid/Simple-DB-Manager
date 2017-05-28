@@ -56,7 +56,7 @@ insert into Stanowiska
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ----- Testy komend -------------------------------------------------------------------------------------------------------------------------------
 -- select * from Stanowiska;
-Select * from Pracownicy
+-- Select * from Pracownicy
 -- select * from Pracownicy WHERE Wiek > 40;
 -- select Zarobki, ID_Pracownika, Imie, Nazwisko from Pracownicy where Zarobki < 2000;
 -- UPDATE Pracownicy SET Zarobki = 2000 where Zarobki <= 1950 ;
